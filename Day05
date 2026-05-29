@@ -1,0 +1,5 @@
+Created AppDbContext class inheriting from DbContext to manage database operations using Entity Framework Core. 
+
+- Configured constructor with DbContextOptions for dependency injection
+- This class acts as a bridge between application and database
+- Will be used to define DbSets for entities in upcoming features
