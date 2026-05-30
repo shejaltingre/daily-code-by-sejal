@@ -1,0 +1,5 @@
+Day 6 - Database Connection Setup
+
+- Configured SQL Server connection in Program.cs using Entity Framework Core
+- Added AppDbContext to dependency injection container
+- Stored connection string securely in appsettings.json
