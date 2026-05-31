@@ -5,3 +5,25 @@ Day 7: Added UI for To-Do App using Razor Pages
 - Displayed list of todos using foreach loop
 - Implemented delete button for each task
 - Used asp-for and asp-page-handler for model binding and actions
+ Index.cshtml (UI)
+@page
+@model IndexModel
+
+<h2>To-Do List</h2>
+
+<form method="post">
+    <input type="text" asp-for="NewTodo.Title" placeholder="Enter task" />
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+@foreach (var item in Model.Todos)
+{
+    <li>
+        @item.Title
+        <form method="post" asp-page-handler="Delete" asp-route-id="@item.Id" style="display:inline;">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+}
+</ul>
